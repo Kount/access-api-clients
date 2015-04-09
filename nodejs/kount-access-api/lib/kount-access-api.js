@@ -36,11 +36,11 @@ var sha = require('js-sha512').sha512_256;
  * provided by Kount for your environments (testing and production)
  * @param string version The Version of the API to use (defaults to "0200")
  */
-module.exports = function (merchantId, apiKey, serverName, version = "0200") {
+module.exports = function (merchantId, apiKey, serverName, version) {
   this.merchantId = merchantId;
   this.apiKey = apiKey;
   this.serverName = serverName;
-  this.defaultVersion = version;
+  this.defaultVersion = typeof version !== 'undefined' ? version : "0200";
 
   /**
    * Gets Device information based on the sessionId

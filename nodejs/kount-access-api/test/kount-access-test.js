@@ -8,7 +8,7 @@ var merchantId = 123456;
 var apiKey = 'SOME_VALID_KEY';
 var badApiKey = 'BAD_KEY';
 var serverName = 'server.com';
-var version = '0200';
+var version = '0210';
 var oldVersion = '0103';
 var badVersion = '0100';
 var user = 'admin';
@@ -20,7 +20,7 @@ describe("kount-access", function() {
     describe(".getDevice", function() {
         it("should return a JSON array and no errors", function(done) {
             var mockApiServer = nock('https://server.com')
-            .get('/api/device?s=' + sessionId + '&v=0200')
+            .get('/api/device?s=' + sessionId + '&v=0210')
             .reply(200, expectedGetOutput);
             var ka = new kount(merchantId, apiKey, serverName);
             var results = ka.getDevice(sessionId, function(err,data){

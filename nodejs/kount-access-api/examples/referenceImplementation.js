@@ -33,7 +33,7 @@ var password ='password';
 //   merchant Id
 //   API key
 //   Server name
-//   Version (optional) in the form of "0200" or null
+//   Version (optional) in the form of "0210" or null
 ///////////////////////////////////////////////////////////////////////////
 var ka = new Kount(merchantId, apiKey, serverName);
 

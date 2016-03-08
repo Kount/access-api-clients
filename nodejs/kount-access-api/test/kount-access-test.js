@@ -25,7 +25,7 @@ describe("kount-access", function() {
             var ka = new kount(merchantId, apiKey, serverName);
             var results = ka.getDevice(sessionId, function(err,data){
               expect(err).equal(null);
-              expect(data).is.not.equal(null);
+              expect(data).eql(expectedGetOutput);
               done();
             });
         });
@@ -38,7 +38,7 @@ describe("kount-access", function() {
         });
         it("should catch the 403 and report up the error in the callback", function(done) {
             var mockApiServer = nock('https://server.com')
-            .get('/api/device?s=' + sessionId + '&v=0200')
+            .get('/api/device?s=' + sessionId + '&v=0210')
             .reply(403);
             var ka = new kount(merchantId, badApiKey, serverName);
             var results = ka.getDevice(sessionId, function(err,data){
@@ -80,7 +80,7 @@ describe("kount-access", function() {
             var ka = new kount(merchantId, apiKey, serverName);
             var results = ka.getVelocity(sessionId, user,password, function(err,data){
               expect(err).is.equal(null);
-              expect(data);
+              expect(data).eql(expectedGetOutput);
               done();
             });
         });
@@ -160,7 +160,7 @@ describe("kount-access", function() {
             var ka = new kount(merchantId, apiKey, serverName);
             var results = ka.getDecision(sessionId, user, password, function(err,data){
               expect(err).is.equal(null);
-              expect(data);
+              expect(data).eql(expectedGetOutput);
               done();
             });
         });

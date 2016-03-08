@@ -1,6 +1,6 @@
 {
   "name": "kount-access-api",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "Kount Access API Library",
   "main": "lib/kount-access-api.js",
   "scripts": {

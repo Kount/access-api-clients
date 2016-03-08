@@ -1,10 +1,10 @@
 # 03-08-2016
-Unit Test Fixes (no code change) (0.3.0)
+Unit Test Fixes (no code change) (2.1.1)
 *  Fixed broken 2.1.0 unit test(403 return error)
 *  Updated Unit tests to expect JSON object (we were not validating properly before)
 
 # 02-15-2016
-Version Number update (0.2.0)
+Version Number update (2.1.0)
 *  Updated default API version to 2.1.0
 
 # 04-09-2015
